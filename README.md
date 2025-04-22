@@ -48,6 +48,22 @@ This project implements an MCP (Model Context Protocol) server for Elasticsearch
    export ES_API_KEY=your_elasticsearch_api_key
    ```
 
+## Configuring the MCP Server for Claude
+
+The `configure_mcp_server.py` script helps you set up the Elasticsearch MCP server in Claude's MCP settings file. This allows Claude to connect to your Elasticsearch cluster through the MCP server.
+
+```bash
+python configure_mcp_server.py your_cloud_id your_api_key
+```
+
+This script:
+1. Takes your Elasticsearch Cloud ID and API Key as command-line arguments
+2. Locates or creates the Claude MCP settings file
+3. Adds or updates the Elasticsearch MCP server configuration
+4. Sets the environment variables needed for the server to connect to your Elasticsearch cluster
+
+After running this script, restart VS Code to apply the changes. Claude will then be able to use the Elasticsearch MCP server to interact with your Elasticsearch cluster.
+
 ## Testing the MCP Resources
 
 ### Option 1: Using the Test Script
