@@ -1,0 +1,2 @@
+elasticsearch>=8.0.0
+mcp-sdk>=0.1.0
