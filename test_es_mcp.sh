@@ -2,10 +2,14 @@
 # Test script for Elasticsearch MCP resources
 
 # Check if ES_CLOUD_ID and ES_API_KEY are provided
-if [ -z "$ES_CLOUD_ID" ] || [ -z "$ES_API_KEY" ]; then
+if [ -z "$MCP_SERVER_CWD" ]; then 
+  if [ -z "$ES_CLOUD_ID" ] || [ -z "$ES_API_KEY" ]; then
     echo "Error: ES_CLOUD_ID and ES_API_KEY environment variables must be set."
     echo "Usage: ES_CLOUD_ID=your_cloud_id ES_API_KEY=your_api_key ./test_es_mcp.sh"
     exit 1
+  fi
+else
+  echo "Using vars from ${MCP_SERVER_CWD}/.env..."
 fi
 
 # Function to clean up on exit
