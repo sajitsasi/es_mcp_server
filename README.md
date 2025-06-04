@@ -89,6 +89,10 @@ The script will:
    ```bash
    ES_CLOUD_ID=your_cloud_id ES_API_KEY=your_api_key python es_mcp_server.py
    ```
+   To use server-sent events instead of stdio, pass `--transport sse` or set `MCP_TRANSPORT=sse`:
+   ```bash
+   ES_CLOUD_ID=your_cloud_id ES_API_KEY=your_api_key python es_mcp_server.py --transport sse
+   ```
 
 2. In Claude, use the `access_mcp_resource` tool to access the resources:
 

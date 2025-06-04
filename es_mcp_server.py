@@ -322,4 +322,14 @@ async def list_indices_resource() -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Run the Elasticsearch MCP server")
+    parser.add_argument(
+        "--transport",
+        default=os.environ.get("MCP_TRANSPORT", "stdio"),
+        help="Transport to use for FastMCP (e.g. 'stdio' or 'sse')",
+    )
+    args = parser.parse_args()
+
+    mcp.run(transport=args.transport)
