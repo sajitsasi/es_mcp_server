@@ -166,16 +166,6 @@ Contributions are welcome! Here's how you can contribute:
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Submit a pull request
 
-## GitHub Repository
-
-This project is ready to be uploaded to GitHub. The repository includes:
-
-- `.gitignore` file to exclude sensitive information and logs
-- `.env.example` file to guide users on setting up their environment variables
-- `requirements.txt` file to list dependencies
-- `LICENSE` file with the MIT License
-- Comprehensive documentation in the README.md
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
